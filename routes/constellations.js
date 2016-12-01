@@ -16,12 +16,12 @@ router.get('/', function(req, res) {
 // URL: http://localhost:3100/constellations/create
 // create a constellation
 router.post('/create', function(req, res) {
-	models.Constellation.create({
+  models.Constellation.create({
     name: req.body.name,
     meaning: req.body.meaning
-	}).then(function() {
-		res.json({ message: 'created constellation' });
-	});
+  }).then(function() {
+    res.json({ message: 'created constellation' });
+  });
 });
 
 // URL: http://localhost:3100/constellations/get/:id
@@ -57,13 +57,13 @@ router.get('/get/:name', function(req, res) {
 router.get('/delete/:id',
   passport.authenticate('bearer', { session: false }),
   function(req, res) {
-  	models.Constellation.destroy({
-  		where: {
-  			id: req.params.id
-  		}
-  	}).then(function() {
-  		res.json({ message: 'deleted constellation' });
-  	});
+    models.Constellation.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function() {
+      res.json({ message: 'deleted constellation' });
+    });
   });
 
 
