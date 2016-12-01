@@ -3,7 +3,7 @@ var express = require('express');
 var passport = require('passport');
 var router = express.Router();
 
-// URL: http://localhost:3100/users/
+// URL: http://localhost:3100/users
 // get all users
 router.get('/', function(req, res) {
 	models.User.findAll().then(function(users) {

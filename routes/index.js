@@ -7,7 +7,7 @@ var router = express.Router();
 // displays a welcome message
 router.get('/', function(req, res) {
 	res.json({
-		message: 'welcome to the api!'
+		message: 'Welcome to the api!'
 	});
 });
 
