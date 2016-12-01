@@ -14,11 +14,11 @@ Open your browser at [http://localhost:3100](http://localhost:3100). You should 
 
 ### Creating Models
 
-To create a new model for your api (eg. Cat), run the following while in the project dir:
+To create a new model for your api (eg. Planet), run the following while in the project dir:
 ```
-$ node_modules/.bin/sequelize model:create --name Cat --attributes name:string,age:integer,has_fur:boolean
+$ node_modules/.bin/sequelize model:create --name Planet --attributes name:string,color:string,is_habitable:boolean
 ```
-This will create a new Cat model with the attributes name, age and has_fur in the /models folder. A migration file for Cat will also be created automatically and placed in the /migrations folder.
+This will create a new Planet model with the attributes name, color and is_habitable in the /models folder. A migration file for Planet will also be created automatically and placed in the /migrations folder.
 
 ### Creating the Database Tables
 
