@@ -45,18 +45,18 @@ Once your app is running, go to [http://localhost:3100/constellations/](http://l
 
 ### Get a single constellation
 
-In Postman, enter the url [http://localhost:3100/constellations/get/:id](http://localhost:3100/constellations/get/:id) and make sure it's set to GET. Click the PARAMS button to the right of the url and enter the value `id` in the key field, and the value `9` in the value field. Press the Send button, and you should see the 'Leo' constellation outputted below.
+In Postman, enter the url [http://localhost:3100/constellations/get/:id](http://localhost:3100/constellations/get/:id) and make sure it's set to GET. Click the PARAMS button to the right of the url and enter "id" in the key field, and the value "9" in the value field. Press the Send button, and you should see the Leo constellation outputted below.
 
 ![get single constellation](images/get_single_example.png)
 
 ### Create a constellation
 
-In Postman, enter the url [http://localhost:3100/constellations/create](http://localhost:3100/constellations/create) and make sure it's set to POST. Click the 'Body' tab and enter `name` as the key, and `Andromeda` as the value. Below that key-value pair you just added, add another key called `meaning` with the value `the chained lady`. Press the Send button, and you should see the response {"message":"created constellation"} if successful.
+In Postman, enter the url [http://localhost:3100/constellations/create](http://localhost:3100/constellations/create) and make sure it's set to POST. Click the Body tab and enter "name" as the key, and "Andromeda" as the value. Below the key-value pair you just added, add another key "meaning" with the value "the chained lady". Press the Send button, and you should see the response {"message":"created constellation"} if successful.
 
 ![create constellation](images/create_example.png)
 
 ### Delete a constellation
 
-This endpoint is a little different - it requires authorization in the form of a Token that you must send to it first. In Postman, enter the url [http://localhost:3100/constellations/delete/:id](http://localhost:3100/constellations/delete/:id) and make sure it's set to GET. Click on the 'Headers' tab and add a new key called `Authorization` with the value `Bearer abc123`. This allows us to send the token `abc123` (one of the valid tokens already stored in the Users table of the database) so that we can are allowed to delete a constellation. Pressing the Send button should result with the response of {"message": "deleted constellation"} if successful. If the authentication was done incorrectly, then you will receive the response 'Unauthorized' instead.
+This endpoint is a little different - it requires authorization in the form of a Token that you must send to it first. In Postman, enter the url [http://localhost:3100/constellations/delete/:id](http://localhost:3100/constellations/delete/:id) and make sure it's set to GET. Click on the Headers tab and add a new key "Authorization" with the value "Bearer abc123". This allows us to send the token "abc123" (one of the valid tokens already stored in the Users table of the database) so that we can are allowed to delete a constellation. Pressing the Send button should result with the response of {"message": "deleted constellation"} if successful. If the authentication was done incorrectly, then you will receive the response "Unauthorized" instead.
 
 ![delete constellation](images/delete_example.png)
